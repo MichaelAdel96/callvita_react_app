@@ -1,38 +1,146 @@
-.App {
-  text-align: center;
+.Header {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    background: rgb(12, 10, 20);
+    color: oldlace;
+    vertical-align: middle;
+    padding-top: 30px;
+    margin-top: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.coloumn {
+    float: left;
+    width: 33%;
+    min-width: 550px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.card {
+    margin-left: 20px;
+    background-color: white;
+    height: 150px;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.card h1,
+.card h2,
+.card h3,
+.card h4,
+.card h5 {
+    margin: 0px;
+    padding: 0px 0px 15px 0px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 30px;
+    color: #282828;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card hr {
+    display: block;
+    border: none;
+    height: 3px;
+    background-color: rgb(12, 10, 12);
+    margin-top: 5px;
+}
+
+.card p {
+    margin: 15px 0px 0px 0px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 100;
+    letter-spacing: -0.25px;
+    line-height: 1.25;
+    font-size: 16px;
+    word-break: break-all;
+    word-wrap: pre-wrap;
+    color: #282828;
+}
+
+.card button {
+    border: none;
+    width: 40%;
+    margin: 10px auto;
+    padding: 10px 30px;
+    margin-left: 5%;
+    color: white;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-transform: uppercase;
+}
+
+
+/* Body style is only for code pen viewing, do not copy in actual project*/
+
+body {
+    font-family: sans-serif;
+    margin: 30px;
+}
+
+.field-container {
+    position: relative;
+    border: 1px solid #bcbaba;
+    height: 50px;
+    width: 90%;
+    padding-left: 12px;
+}
+
+.field-placeholder {
+    position: absolute;
+    top: 50%;
+    transform: translate(5px, -50%);
+    pointer-events: none;
+    transition: all .14s ease-in-out;
+    font-size: 18px;
+    color: #adadad;
+}
+
+input[type="text"].field-input {
+    color: #000;
+    border: none;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 16px;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 35px;
+    bottom: 0px;
+}
+
+input[type="text"].field-input:focus {
+    outline: none;
+}
+
+input[type="text"].field-input.c-fix,
+input[type="text"].field-input:focus,
+input[type="text"].field-input:not(:placeholder-shown) {
+    border-color: transparent;
+}
+
+input[type="text"].field-input.c-fix~label,
+input[type="text"].field-input:focus~label,
+input[type="text"].field-input:not(:placeholder-shown)~label {
+    color: #646669;
+    font-size: 11px;
+    top: calc(30% - .5rem);
+    transform: translate(5px, 0%);
+}
+
+input[type="text"].field-input::-webkit-input-placeholder {
+    color: transparent;
+}
+
+input[type="text"].field-input::-moz-placeholder {
+    color: transparent;
+}
+
+input[type="text"].field-input:-ms-input-placeholder {
+    color: transparent;
 }
